@@ -16,41 +16,174 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .container {
   width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
-.menu {
+.menu-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 320px;
+  height: 100vh;
+  -webkit-transform: translateX(-220px);
+          transform: translateX(-220px);
+  -webkit-transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+  font-size: 18px;
+}
+
+.menu-content:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  z-index: -10;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.menu-content:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#555), to(#fff));
+  background: linear-gradient(to bottom right, #555, #fff);
+  position: absolute;
+  z-index: -20;
+  opacity: 0.9;
+}
+
+.menu-content.open {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  background-color: transparent;
+}
+
+.menu-content.open:before {
+  opacity: 0;
+}
+
+.menu-content .menu {
   position: absolute;
   top: 20px;
-  left: 50px;
+  right: 15px;
   cursor: pointer;
 }
 
-.menu .menu-border span {
+.menu-content .menu .menu-border span {
   display: block;
   width: 20px;
-  border-bottom: 3px solid #000;
+  height: 3px;
+  background-color: #000;
   margin-top: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.menu .menu-border span:nth-child(1) {
+.menu-content .menu .menu-border span:nth-child(1) {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-.menu .menu-border span:nth-child(3) {
+.menu-content .menu .menu-border span:nth-child(3) {
   -webkit-transform: translateX(-2px);
           transform: translateX(-2px);
 }
 
-.menu p {
+.menu-content .menu.open .menu-border span:nth-child(1) {
+  width: 25px;
+  -webkit-transform: translate(0px, 8px) rotate(135deg);
+          transform: translate(0px, 8px) rotate(135deg);
+}
+
+.menu-content .menu.open .menu-border span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-content .menu.open .menu-border span:nth-child(3) {
+  width: 25px;
+  -webkit-transform: translate(0px, -8px) rotate(-135deg);
+          transform: translate(0px, -8px) rotate(-135deg);
+}
+
+.menu-content .menu p {
   font-size: 12px;
   margin-top: 8px;
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
+}
+
+.menu-content .go-back-button {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu-content .go-back-button p {
+  cursor: pointer;
+}
+
+.menu-content .menu-nav {
+  position: absolute;
+  top: 150px;
+  right: 150px;
+}
+
+.menu-content .menu-nav ul li {
+  margin-bottom: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.menu-content .menu-nav ul li:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+.menu-content .menu-nav ul li:nth-child(4) .portfolios li {
+  font-size: 14px;
+  margin: 30px 0 0 30px;
+  border-bottom: 1px solid #000;
+}
+
+.menu-content2 {
+  position: absolute;
+  top: 580px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+
+.menu-content2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-content2 ul li:not(:last-child) {
+  margin-right: 30px;
+  cursor: pointer;
 }
 
 main > div {
@@ -98,10 +231,10 @@ main .profile .profile-contents {
 main .profile .profile-contents .profile-photo {
   width: 50%;
   margin: 0 30px;
-  height: 300px;
-  background-image: url("../images/S__6857473.jpg");
-  background-size: cover;
+  height: 350px;
+  background-image: url("../images/sanshiro_photo1.jpg");
   background-position: center;
+  background-size: cover;
 }
 
 main .profile .profile-contents .profile-text {
@@ -136,8 +269,6 @@ main .skills h3 {
 }
 
 main .skills ul {
-  padding: 0;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,11 +303,9 @@ main .works h2 {
 }
 
 main .works ul {
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
 }
 
 main .works ul .work {
@@ -188,6 +317,32 @@ main .works ul .work .work-image {
   height: 200px;
   background-size: cover;
   background-position: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+main .works ul .work .work-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #777;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+main .works ul .work .work-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main .works ul .work .work-image:hover::before {
+  opacity: 0.2;
 }
 
 main .works ul .work .work-image.portfolio-site {
@@ -221,6 +376,10 @@ main .contact h2 {
   padding-top: 50px;
   font-size: 30px;
   margin-bottom: 150px;
+}
+
+main .contact .contact-text p {
+  font-size: 18px;
 }
 
 main .contact .contact-list {
@@ -259,6 +418,15 @@ main .contact .contact-list a .twitter-icon {
   border-radius: 25px;
   width: 50px;
   height: 50px;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .contact .contact-list a .twitter-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
 }
 
 main .contact .contact-list a .twitter-icon i {
@@ -269,7 +437,6 @@ main .contact .contact-list a .twitter-icon i {
 
 main .contact .contact-list p {
   margin-top: 30px;
-  font-size: 14px;
 }
 
 main .contact .copyright {
@@ -285,6 +452,12 @@ main .contact .copyright {
 @media screen and (max-width: 800px) {
   body {
     font-size: 14px;
+  }
+  .menu-content {
+    display: none;
+  }
+  .menu-content2 {
+    display: block;
   }
   main .container {
     width: 520px;
