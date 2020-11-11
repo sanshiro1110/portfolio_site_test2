@@ -1,6 +1,7 @@
 $cBlack: #000;
 $cWhite: #fff;
 $bBlack: #333;
+$cGray: #777;
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -82,7 +83,7 @@ main .profile {
   & h2 {
     padding-top: 50px;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   & .profile-contents {
@@ -94,6 +95,7 @@ main .profile {
       height: 300px;
       background-image: url('../images/S__6857473.jpg');
       background-size: cover;
+      background-position: center;
     }
     & .profile-text {
       width: 50%;
@@ -119,13 +121,14 @@ main .skills {
   & h2 {
     padding-top: 50px;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   & h3 {
     margin-bottom: 10px;
     letter-spacing: 1px;
   }
   & ul {
+    padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -138,7 +141,8 @@ main .skills {
         height: 25px;
       }
 
-      & span {
+      & p {
+        display: inline;
         vertical-align: top;
       }
     }
@@ -166,6 +170,7 @@ main .works {
       & .work-image {
         height: 200px;
         background-size: cover;
+        background-position: center;
 
         &.portfolio-site {
           background-image: url('../images/portfolio_image.png');
@@ -190,3 +195,166 @@ main .works {
   }
 }
 
+main .contact {
+  background-color: $cWhite;
+  color: $cBlack;
+  position: relative;
+
+  & h2 {
+    padding-top: 50px;
+    font-size: 30px;
+    margin-bottom: 150px;
+  }
+
+  & .contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+
+    a {
+      text-decoration: none;
+
+      & .twitter-icon {
+        background-color: #00BFFF;
+        color: $cWhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+
+        & i {
+          transform: translate(3px, 1px);
+          font-size: 20px;
+        }
+      }
+    }
+
+    & p {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  }
+
+  & .copyright {
+    font-size: 12px;
+    color: $cGray;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+//タブレット用CSS
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  main .container {
+    width: 520px;
+  }
+
+  main .profile .profile-contents {
+
+    & .profile-photo {
+      margin: 0px 15px 0px 0px;
+    }
+    & .profile-text {
+      margin: 0px 0px 0px 15px;
+    }
+  }
+
+  main .skills ul li{
+    margin-right: 15px;
+
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  main .works ul .work {
+    margin: 0 10px;
+
+    & .work-text {
+      font-size: 12px;
+    }
+  }
+
+  main .contact .contact-text p {
+    font-size: 16px;
+  }
+}
+
+//スマートフォン用CSS
+@media screen and (max-width: 520px) {
+  .menu {
+    left: 30px;
+  }
+
+  main .container {
+    width: 320px;
+  }
+
+  main > div .container h2{
+    font-size: 25px;
+  }
+
+  main .profile {
+    & h2 {
+      margin-bottom: 50px;
+    }
+
+    .profile-contents {
+      display: block;
+      text-align: center;
+
+      & .profile-photo {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 20px;
+      }
+      & .profile-text {
+        width: 100%;
+        margin: 0;
+
+        & p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  main .skills .languages ul li {
+    margin-right: 10px;
+    font-size: 12px;
+
+    & span {
+      display: block;
+    }
+  }
+
+  main .works ul .work {
+    & .work-image {
+      height: 150px;
+    }
+
+    & .work-text {
+      margin-top: 20px;
+
+      & p,
+      & span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  main .contact .copyright {
+    font-size: 10px;
+  }
+}

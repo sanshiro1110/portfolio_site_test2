@@ -86,7 +86,7 @@ main .profile {
 main .profile h2 {
   padding-top: 50px;
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 main .profile .profile-contents {
@@ -101,6 +101,7 @@ main .profile .profile-contents .profile-photo {
   height: 300px;
   background-image: url("../images/S__6857473.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 main .profile .profile-contents .profile-text {
@@ -126,7 +127,7 @@ main .skills .container div {
 main .skills h2 {
   padding-top: 50px;
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 main .skills h3 {
@@ -135,6 +136,7 @@ main .skills h3 {
 }
 
 main .skills ul {
+  padding: 0;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +155,8 @@ main .skills ul li img {
   height: 25px;
 }
 
-main .skills ul li span {
+main .skills ul li p {
+  display: inline;
   vertical-align: top;
 }
 
@@ -184,6 +187,7 @@ main .works ul .work {
 main .works ul .work .work-image {
   height: 200px;
   background-size: cover;
+  background-position: center;
 }
 
 main .works ul .work .work-image.portfolio-site {
@@ -205,5 +209,158 @@ main .works ul .work .work-text p {
 
 main .works ul .work .work-text span {
   font-size: 13px;
+}
+
+main .contact {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+}
+
+main .contact h2 {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 150px;
+}
+
+main .contact .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+main .contact .contact-list a {
+  text-decoration: none;
+}
+
+main .contact .contact-list a .twitter-icon {
+  background-color: #00BFFF;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+main .contact .contact-list a .twitter-icon i {
+  -webkit-transform: translate(3px, 1px);
+          transform: translate(3px, 1px);
+  font-size: 20px;
+}
+
+main .contact .contact-list p {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+main .contact .copyright {
+  font-size: 12px;
+  color: #777;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+  main .container {
+    width: 520px;
+  }
+  main .profile .profile-contents .profile-photo {
+    margin: 0px 15px 0px 0px;
+  }
+  main .profile .profile-contents .profile-text {
+    margin: 0px 0px 0px 15px;
+  }
+  main .skills ul li {
+    margin-right: 15px;
+  }
+  main .skills ul li img {
+    width: 20px;
+    height: 20px;
+  }
+  main .works ul .work {
+    margin: 0 10px;
+  }
+  main .works ul .work .work-text {
+    font-size: 12px;
+  }
+  main .contact .contact-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .menu {
+    left: 30px;
+  }
+  main .container {
+    width: 320px;
+  }
+  main > div .container h2 {
+    font-size: 25px;
+  }
+  main .profile h2 {
+    margin-bottom: 50px;
+  }
+  main .profile .profile-contents {
+    display: block;
+    text-align: center;
+  }
+  main .profile .profile-contents .profile-photo {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+  }
+  main .profile .profile-contents .profile-text {
+    width: 100%;
+    margin: 0;
+  }
+  main .profile .profile-contents .profile-text p {
+    margin-bottom: 0;
+  }
+  main .skills .languages ul li {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  main .skills .languages ul li span {
+    display: block;
+  }
+  main .works ul .work .work-image {
+    height: 150px;
+  }
+  main .works ul .work .work-text {
+    margin-top: 20px;
+  }
+  main .works ul .work .work-text p,
+  main .works ul .work .work-text span {
+    font-size: 12px;
+  }
+  main .contact .copyright {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
