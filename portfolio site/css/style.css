@@ -1,0 +1,366 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.menu .menu-border span {
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #000;
+  margin-top: 5px;
+}
+
+.menu .menu-border span:nth-child(1) {
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+}
+
+.menu .menu-border span:nth-child(3) {
+  -webkit-transform: translateX(-2px);
+          transform: translateX(-2px);
+}
+
+.menu p {
+  font-size: 12px;
+  margin-top: 8px;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+main > div {
+  height: 100vh;
+}
+
+main .home {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  color: #000;
+}
+
+main .home .title h1 {
+  margin-top: 20px;
+  letter-spacing: 8px;
+  font-size: 45px;
+}
+
+main .profile {
+  background-color: #333;
+  color: #fff;
+}
+
+main .profile h2 {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+main .profile .profile-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .profile .profile-contents .profile-photo {
+  width: 50%;
+  margin: 0 30px;
+  height: 300px;
+  background-image: url("../images/S__6857473.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .profile .profile-contents .profile-text {
+  width: 50%;
+  text-align: left;
+  margin: 20px 30px 0px 30px;
+  line-height: 1.7rem;
+}
+
+main .profile .profile-contents .profile-text p {
+  margin-bottom: 10px;
+}
+
+main .skills {
+  background-color: #fff;
+  color: #000;
+}
+
+main .skills .container div {
+  margin-bottom: 50px;
+}
+
+main .skills h2 {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+main .skills h3 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+main .skills ul {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .skills ul li {
+  margin-right: 40px;
+}
+
+main .skills ul li img {
+  width: 25px;
+  height: 25px;
+}
+
+main .skills ul li p {
+  display: inline;
+  vertical-align: top;
+}
+
+main .works {
+  background-color: #333;
+  color: #fff;
+}
+
+main .works h2 {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 120px;
+}
+
+main .works ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+main .works ul .work {
+  width: 50%;
+  margin: 0 30px;
+}
+
+main .works ul .work .work-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+main .works ul .work .work-image.portfolio-site {
+  background-image: url("../images/portfolio_image.png");
+}
+
+main .works ul .work .work-image.vue-app {
+  background-image: url("../images/vueApp_image.png");
+}
+
+main .works ul .work .work-text {
+  margin-top: 30px;
+}
+
+main .works ul .work .work-text p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+main .works ul .work .work-text span {
+  font-size: 13px;
+}
+
+main .contact {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+}
+
+main .contact h2 {
+  padding-top: 50px;
+  font-size: 30px;
+  margin-bottom: 150px;
+}
+
+main .contact .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+main .contact .contact-list a {
+  text-decoration: none;
+}
+
+main .contact .contact-list a .twitter-icon {
+  background-color: #00BFFF;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+main .contact .contact-list a .twitter-icon i {
+  -webkit-transform: translate(3px, 1px);
+          transform: translate(3px, 1px);
+  font-size: 20px;
+}
+
+main .contact .contact-list p {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+main .contact .copyright {
+  font-size: 12px;
+  color: #777;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+  main .container {
+    width: 520px;
+  }
+  main .profile .profile-contents .profile-photo {
+    margin: 0px 15px 0px 0px;
+  }
+  main .profile .profile-contents .profile-text {
+    margin: 0px 0px 0px 15px;
+  }
+  main .skills ul li {
+    margin-right: 15px;
+  }
+  main .skills ul li img {
+    width: 20px;
+    height: 20px;
+  }
+  main .works ul .work {
+    margin: 0 10px;
+  }
+  main .works ul .work .work-text {
+    font-size: 12px;
+  }
+  main .contact .contact-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .menu {
+    left: 30px;
+  }
+  main .container {
+    width: 320px;
+  }
+  main > div .container h2 {
+    font-size: 25px;
+  }
+  main .profile h2 {
+    margin-bottom: 50px;
+  }
+  main .profile .profile-contents {
+    display: block;
+    text-align: center;
+  }
+  main .profile .profile-contents .profile-photo {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+  }
+  main .profile .profile-contents .profile-text {
+    width: 100%;
+    margin: 0;
+  }
+  main .profile .profile-contents .profile-text p {
+    margin-bottom: 0;
+  }
+  main .skills .languages ul li {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  main .skills .languages ul li span {
+    display: block;
+  }
+  main .works ul .work .work-image {
+    height: 150px;
+  }
+  main .works ul .work .work-text {
+    margin-top: 20px;
+  }
+  main .works ul .work .work-text p,
+  main .works ul .work .work-text span {
+    font-size: 12px;
+  }
+  main .contact .copyright {
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
