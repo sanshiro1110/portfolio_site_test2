@@ -34,7 +34,7 @@ ul {
 }
 
 .container {
-  width: 800px;
+  width: 84%;
   margin: 0 auto;
   text-align: center;
 }
@@ -44,9 +44,9 @@ ul {
   top: 0;
   left: 0;
   z-index: 10;
-  width: 320px;
+  width: 400px;
   height: 100vh;
-  transform: translateX(-220px);
+  transform: translateX(-75%);
   transition: all 0.5s cubic-bezier(0.80, 0.0, 0.20, 1.0);
   font-size: 18px;
 
@@ -61,7 +61,7 @@ ul {
   }
   &:after {
     content: "";
-    width: 100%;
+    width: 99.5%;
     height: 100%;
     background: linear-gradient(to bottom right, $cGray2, $cWhite);
     position: absolute;
@@ -125,8 +125,8 @@ ul {
 
   .go-back-button {
     position: absolute;
-    top: 30px;
-    right: 150px;
+    top: 4.4%;
+    left: 10%;
     font-size: 14px;
     letter-spacing: 1px;
 
@@ -137,22 +137,22 @@ ul {
 
   .menu-nav {
     position: absolute;
-    top: 150px;
-    right: 150px;
+    top: 22%;
+    left: 15.6%;
 
     & ul {
       & li {
-        margin-bottom: 50px;
+        margin-bottom: 39%;
         cursor: pointer;
         transition: all 0.3s;
 
         &:nth-child(3) {
-          margin-bottom: 20px;
+          margin-bottom: 15.6%;
         }
 
         &:nth-child(4) .portfolios li {
           font-size: 14px;
-          margin: 30px 0 0 30px;
+          margin: 30.6% 0 0 30px;
           border-bottom: 1px solid $cBlack;
         }
       }
@@ -162,7 +162,7 @@ ul {
 
 .menu-content2 {
   position: absolute;
-  top: 580px;
+  bottom: 11.8%;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -179,6 +179,12 @@ ul {
 
 main > div {
   height: 100vh;
+
+  & h2 {
+    padding-top: 6.2%;
+    font-size: 30px;
+    margin-bottom: 10%;
+  }
 }
 
 main .home {
@@ -202,31 +208,26 @@ main .profile {
   background-color: $bBlack;
   color: $cWhite;
 
-  & h2 {
-    padding-top: 50px;
-    font-size: 30px;
-    margin-bottom: 100px;
-  }
-
   & .profile-contents {
     display: flex;
 
     & .profile-photo {
       width: 50%;
-      margin: 0 30px;
-      height: 350px;
+      height: auto;
+      margin: 0 3.6%;
       background-image: url('../images/sanshiro_photo1.jpg');
-      background-position: center;
+      background-position: 0px -40px;
       background-size: cover;
+      background-repeat: no-repeat;
     }
     & .profile-text {
       width: 50%;
       text-align: left;
-      margin: 20px 30px 0px 30px;
+      margin: 2.4% 3.6% 0px 3.6%;
       line-height: 1.7rem;
 
       & p {
-        margin-bottom: 10px;
+        margin-bottom: 3%;
       }
     }
   }
@@ -236,14 +237,8 @@ main .skills {
   background-color: $cWhite;
   color: $cBlack;
 
-  & .container div {
-    margin-bottom: 50px;
-  }
-
-  & h2 {
-    padding-top: 50px;
-    font-size: 30px;
-    margin-bottom: 100px;
+  & div {
+    margin-bottom: 4%;
   }
   & h3 {
     margin-bottom: 10px;
@@ -254,7 +249,7 @@ main .skills {
     justify-content: center;
 
     & li {
-      margin-right: 40px;
+      margin-right: 5%;
 
       & img {
         width: 25px;
@@ -274,23 +269,21 @@ main .works {
   color: $cWhite;
 
   & h2 {
-    padding-top: 50px;
-    font-size: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 12%;
   }
   & ul {
     display: flex;
 
     & .work {
       width: 50%;
-      margin: 0 30px;
+      margin: 0 3.6%;
 
       & .work-image {
-        height: 200px;
         background-size: cover;
         background-position: center;
         transition: all 0.3s;
         position: relative;
+        height: 250px;
 
         &::before {
           content: "";
@@ -322,15 +315,18 @@ main .works {
       }
 
       & .work-text {
-        margin-top: 30px;
+        margin-top: 8.5%;
 
         & p {
-          margin-bottom: 20px;
+          margin-bottom: 5.7%;
           font-size: 15px;
         }
         & span {
           font-size: 13px;
         }
+      }
+      & .work-text2 {
+        display: none;
       }
     }
   }
@@ -342,9 +338,7 @@ main .contact {
   position: relative;
 
   & h2 {
-    padding-top: 50px;
-    font-size: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 18.3%;
   }
 
   & .contact-text p {
@@ -356,7 +350,7 @@ main .contact {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 12%;
 
     a {
       text-decoration: none;
@@ -386,7 +380,7 @@ main .contact {
     }
 
     & p {
-      margin-top: 30px;
+      margin-top: 3.7%;
     }
   }
 
@@ -400,83 +394,65 @@ main .contact {
   }
 }
 
-//タブレット用CSS
-@media screen and (max-width: 800px) {
-  body {
-    font-size: 14px;
-  }
-  .menu-content {
-    display: none;
-  }
-  .menu-content2 {
-    display: block;
+//スマートフォン横/タブレット縦用CSS
+@media screen and (max-width: 896px) {
+  main > div:not(:nth-child(1)) {
+    height: auto;
   }
 
-  main .container {
-    width: 520px;
-  }
-
-  main .profile .profile-contents {
-
-    & .profile-photo {
-      margin: 0px 15px 0px 0px;
-    }
-    & .profile-text {
-      margin: 0px 0px 0px 15px;
-    }
-  }
-
-  main .skills ul li{
-    margin-right: 15px;
-
-    & img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  main .works ul .work {
-    margin: 0 10px;
-
-    & .work-text {
-      font-size: 12px;
-    }
-  }
-
-  main .contact .contact-text p {
-    font-size: 16px;
+  main > div .container {
+    padding: 0 0 40px 0;
   }
 }
 
-//スマートフォン用CSS
-@media screen and (max-width: 520px) {
-  .menu {
-    left: 30px;
+//スマートフォン縦用CSS
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
   }
 
-  main .container {
-    width: 320px;
+  .menu-content {
+    display: none;
   }
 
-  main > div .container h2{
-    font-size: 25px;
-  }
+  .menu-content2 {
+    display: block;
 
-  main .profile {
-    & h2 {
-      margin-bottom: 50px;
+    & ul li {
+      margin-right: 5px;
     }
+  }
 
-    .profile-contents {
+  main > div:not(:nth-child(1)) {
+    height: auto;
+  }
+
+  main .home .container .title h1{
+    font-size: 35px;
+  }
+
+  main > div .container {
+    padding: 0 0 20px 0;
+
+    & h2 {
+      margin-bottom: 22%;
+      font-size: 25px;
+    }
+  }
+
+  main .profile .container {
+
+    & .profile-contents {
       display: block;
       text-align: center;
 
       & .profile-photo {
-        width: 100%;
-        height: 220px;
-        margin-bottom: 20px;
+        width: 90%;
+        height: 150px;
+        margin: 0px auto 20px;
       }
       & .profile-text {
+        line-height: 1.7;
         width: 100%;
         margin: 0;
 
@@ -487,31 +463,62 @@ main .contact {
     }
   }
 
-  main .skills .languages ul li {
-    margin-right: 10px;
-    font-size: 12px;
+  main .skills .container {
 
-    & span {
-      display: block;
-    }
-  }
-
-  main .works ul .work {
-    & .work-image {
-      height: 150px;
+    & > div {
+      margin-bottom: 13%;
     }
 
-    & .work-text {
-      margin-top: 20px;
+    & .languages ul {
+      flex-wrap: wrap;
 
-      & p,
-      & span {
-        font-size: 12px;
+      & li{
+       margin-bottom: 10px;
       }
     }
   }
 
-  main .contact .copyright {
-    font-size: 10px;
+  main .works .container {
+    & ul {
+      flex-direction: column;
+      align-items: center;
+
+      & .work {
+        margin: 0 20px;
+        width: 100%;
+
+        &:nth-child(1) {
+          margin: 0 20px 20px 20px;
+        }
+        & .work-image {
+          height: 150px;
+        }
+
+        & .work-text {
+          display: none;
+        }
+
+        & .work-text2 {
+          display: block;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  main .contact .container {
+
+    & .contact-text p {
+      font-size: 14px;
+    }
+
+    & .contact-list {
+      margin-bottom: 150px;
+    }
+
+    & .copyright {
+      position: static;
+      transform: none;
+    }
   }
 }

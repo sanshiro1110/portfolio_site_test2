@@ -30,7 +30,7 @@ ul {
 }
 
 .container {
-  width: 800px;
+  width: 84%;
   margin: 0 auto;
   text-align: center;
 }
@@ -40,10 +40,10 @@ ul {
   top: 0;
   left: 0;
   z-index: 10;
-  width: 320px;
+  width: 400px;
   height: 100vh;
-  -webkit-transform: translateX(-220px);
-          transform: translateX(-220px);
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
   -webkit-transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
   transition: all 0.5s cubic-bezier(0.8, 0, 0.2, 1);
   font-size: 18px;
@@ -62,7 +62,7 @@ ul {
 
 .menu-content:after {
   content: "";
-  width: 100%;
+  width: 99.5%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right bottom, from(#555), to(#fff));
   background: linear-gradient(to bottom right, #555, #fff);
@@ -133,8 +133,8 @@ ul {
 
 .menu-content .go-back-button {
   position: absolute;
-  top: 30px;
-  right: 150px;
+  top: 4.4%;
+  left: 10%;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -145,30 +145,30 @@ ul {
 
 .menu-content .menu-nav {
   position: absolute;
-  top: 150px;
-  right: 150px;
+  top: 22%;
+  left: 15.6%;
 }
 
 .menu-content .menu-nav ul li {
-  margin-bottom: 50px;
+  margin-bottom: 39%;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .menu-content .menu-nav ul li:nth-child(3) {
-  margin-bottom: 20px;
+  margin-bottom: 15.6%;
 }
 
 .menu-content .menu-nav ul li:nth-child(4) .portfolios li {
   font-size: 14px;
-  margin: 30px 0 0 30px;
+  margin: 30.6% 0 0 30px;
   border-bottom: 1px solid #000;
 }
 
 .menu-content2 {
   position: absolute;
-  top: 580px;
+  bottom: 11.8%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -188,6 +188,12 @@ ul {
 
 main > div {
   height: 100vh;
+}
+
+main > div h2 {
+  padding-top: 6.2%;
+  font-size: 30px;
+  margin-bottom: 10%;
 }
 
 main .home {
@@ -216,12 +222,6 @@ main .profile {
   color: #fff;
 }
 
-main .profile h2 {
-  padding-top: 50px;
-  font-size: 30px;
-  margin-bottom: 100px;
-}
-
 main .profile .profile-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,22 +230,23 @@ main .profile .profile-contents {
 
 main .profile .profile-contents .profile-photo {
   width: 50%;
-  margin: 0 30px;
-  height: 350px;
+  height: auto;
+  margin: 0 3.6%;
   background-image: url("../images/sanshiro_photo1.jpg");
-  background-position: center;
+  background-position: 0px -40px;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main .profile .profile-contents .profile-text {
   width: 50%;
   text-align: left;
-  margin: 20px 30px 0px 30px;
+  margin: 2.4% 3.6% 0px 3.6%;
   line-height: 1.7rem;
 }
 
 main .profile .profile-contents .profile-text p {
-  margin-bottom: 10px;
+  margin-bottom: 3%;
 }
 
 main .skills {
@@ -253,14 +254,8 @@ main .skills {
   color: #000;
 }
 
-main .skills .container div {
-  margin-bottom: 50px;
-}
-
-main .skills h2 {
-  padding-top: 50px;
-  font-size: 30px;
-  margin-bottom: 100px;
+main .skills div {
+  margin-bottom: 4%;
 }
 
 main .skills h3 {
@@ -278,7 +273,7 @@ main .skills ul {
 }
 
 main .skills ul li {
-  margin-right: 40px;
+  margin-right: 5%;
 }
 
 main .skills ul li img {
@@ -297,9 +292,7 @@ main .works {
 }
 
 main .works h2 {
-  padding-top: 50px;
-  font-size: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 12%;
 }
 
 main .works ul {
@@ -310,16 +303,16 @@ main .works ul {
 
 main .works ul .work {
   width: 50%;
-  margin: 0 30px;
+  margin: 0 3.6%;
 }
 
 main .works ul .work .work-image {
-  height: 200px;
   background-size: cover;
   background-position: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
+  height: 250px;
 }
 
 main .works ul .work .work-image::before {
@@ -354,16 +347,20 @@ main .works ul .work .work-image.vue-app {
 }
 
 main .works ul .work .work-text {
-  margin-top: 30px;
+  margin-top: 8.5%;
 }
 
 main .works ul .work .work-text p {
-  margin-bottom: 20px;
+  margin-bottom: 5.7%;
   font-size: 15px;
 }
 
 main .works ul .work .work-text span {
   font-size: 13px;
+}
+
+main .works ul .work .work-text2 {
+  display: none;
 }
 
 main .contact {
@@ -373,9 +370,7 @@ main .contact {
 }
 
 main .contact h2 {
-  padding-top: 50px;
-  font-size: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 18.3%;
 }
 
 main .contact .contact-text p {
@@ -396,7 +391,7 @@ main .contact .contact-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 150px;
+  margin-top: 12%;
 }
 
 main .contact .contact-list a {
@@ -436,7 +431,7 @@ main .contact .contact-list a .twitter-icon i {
 }
 
 main .contact .contact-list p {
-  margin-top: 30px;
+  margin-top: 3.7%;
 }
 
 main .contact .copyright {
@@ -449,9 +444,18 @@ main .contact .copyright {
           transform: translateX(-50%);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 896px) {
+  main > div:not(:nth-child(1)) {
+    height: auto;
+  }
+  main > div .container {
+    padding: 0 0 40px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   .menu-content {
     display: none;
@@ -459,81 +463,85 @@ main .contact .copyright {
   .menu-content2 {
     display: block;
   }
-  main .container {
-    width: 520px;
+  .menu-content2 ul li {
+    margin-right: 5px;
   }
-  main .profile .profile-contents .profile-photo {
-    margin: 0px 15px 0px 0px;
+  main > div:not(:nth-child(1)) {
+    height: auto;
   }
-  main .profile .profile-contents .profile-text {
-    margin: 0px 0px 0px 15px;
+  main .home .container .title h1 {
+    font-size: 35px;
   }
-  main .skills ul li {
-    margin-right: 15px;
-  }
-  main .skills ul li img {
-    width: 20px;
-    height: 20px;
-  }
-  main .works ul .work {
-    margin: 0 10px;
-  }
-  main .works ul .work .work-text {
-    font-size: 12px;
-  }
-  main .contact .contact-text p {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .menu {
-    left: 30px;
-  }
-  main .container {
-    width: 320px;
+  main > div .container {
+    padding: 0 0 20px 0;
   }
   main > div .container h2 {
+    margin-bottom: 22%;
     font-size: 25px;
   }
-  main .profile h2 {
-    margin-bottom: 50px;
-  }
-  main .profile .profile-contents {
+  main .profile .container .profile-contents {
     display: block;
     text-align: center;
   }
-  main .profile .profile-contents .profile-photo {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 20px;
+  main .profile .container .profile-contents .profile-photo {
+    width: 90%;
+    height: 150px;
+    margin: 0px auto 20px;
   }
-  main .profile .profile-contents .profile-text {
+  main .profile .container .profile-contents .profile-text {
+    line-height: 1.7;
     width: 100%;
     margin: 0;
   }
-  main .profile .profile-contents .profile-text p {
+  main .profile .container .profile-contents .profile-text p {
     margin-bottom: 0;
   }
-  main .skills .languages ul li {
-    margin-right: 10px;
-    font-size: 12px;
+  main .skills .container > div {
+    margin-bottom: 13%;
   }
-  main .skills .languages ul li span {
-    display: block;
+  main .skills .container .languages ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  main .works ul .work .work-image {
+  main .skills .container .languages ul li {
+    margin-bottom: 10px;
+  }
+  main .works .container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .works .container ul .work {
+    margin: 0 20px;
+    width: 100%;
+  }
+  main .works .container ul .work:nth-child(1) {
+    margin: 0 20px 20px 20px;
+  }
+  main .works .container ul .work .work-image {
     height: 150px;
   }
-  main .works ul .work .work-text {
-    margin-top: 20px;
+  main .works .container ul .work .work-text {
+    display: none;
   }
-  main .works ul .work .work-text p,
-  main .works ul .work .work-text span {
-    font-size: 12px;
+  main .works .container ul .work .work-text2 {
+    display: block;
+    margin-top: 10px;
   }
-  main .contact .copyright {
-    font-size: 10px;
+  main .contact .container .contact-text p {
+    font-size: 14px;
+  }
+  main .contact .container .contact-list {
+    margin-bottom: 150px;
+  }
+  main .contact .container .copyright {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
