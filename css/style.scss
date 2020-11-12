@@ -14,6 +14,7 @@ body {
   letter-spacing: 3px;
   margin: 0;
   padding: 0;
+  min-width: 320px;
 }
 
 h1, h2, h3, h4, h5, h6,p {
@@ -394,15 +395,83 @@ main .contact {
   }
 }
 
-//スマートフォン横/タブレット縦用CSS
-@media screen and (max-width: 896px) {
+//ipadPro縦用css
+@media screen and (max-width: 1024px) {
+  .menu-content {
+    transform: translateX(-65%);
+
+    & .menu {
+      top: 50px;
+
+      & .menu-border span {
+        width: 30px;
+        margin-top: 8px;
+      }
+
+      &.open .menu-border span {
+        width: 35px;
+
+        &:nth-child(1) {
+          transform: translate(0, 11px) rotate(135deg);
+        }
+        &:nth-child(3) {
+          transform: translate(0, -11px) rotate(-135deg);
+        }
+      }
+    }
+  }
+
   main > div:not(:nth-child(1)) {
     height: auto;
   }
+  main > div .container {
+    padding: 0 0 100px 0;
+  }
+
+  main .home .container .title h1 {
+    font-size: 55px;
+  }
+
+  main .works .container .work .work-image {
+    pointer-events: none;
+  }
+
+  main .contact .container {
+    & .contact-list {
+      margin-bottom: 150px;
+
+      & .twitter-icon {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//スマートフォン横/タブレット縦用CSS
+@media screen and (max-width: 896px) {
+  .menu-content {
+    width: 320px;
+
+    & .menu {
+      top: 30px;
+    }
+  }
 
   main > div .container {
-    padding: 0 0 40px 0;
+    padding: 0 0 50px 0;
   }
+
+  main .profile .container .profile-photo {
+    height: 350px;
+  }
+
+  main .contact .container {
+
+    & .contact-text p {
+      font-size: 20px;
+    }
+  }
+
 }
 
 //スマートフォン縦用CSS
@@ -418,8 +487,8 @@ main .contact {
   .menu-content2 {
     display: block;
 
-    & ul li {
-      margin-right: 5px;
+    & ul li:not(:last-child) {
+      margin-right: 20px;
     }
   }
 
@@ -432,7 +501,7 @@ main .contact {
   }
 
   main > div .container {
-    padding: 0 0 20px 0;
+    padding: 0 0 40px 0;
 
     & h2 {
       margin-bottom: 22%;

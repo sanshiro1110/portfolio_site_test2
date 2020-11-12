@@ -9,6 +9,7 @@ body {
   letter-spacing: 3px;
   margin: 0;
   padding: 0;
+  min-width: 320px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -444,12 +445,64 @@ main .contact .copyright {
           transform: translateX(-50%);
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 1024px) {
+  .menu-content {
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+  .menu-content .menu {
+    top: 50px;
+  }
+  .menu-content .menu .menu-border span {
+    width: 30px;
+    margin-top: 8px;
+  }
+  .menu-content .menu.open .menu-border span {
+    width: 35px;
+  }
+  .menu-content .menu.open .menu-border span:nth-child(1) {
+    -webkit-transform: translate(0, 11px) rotate(135deg);
+            transform: translate(0, 11px) rotate(135deg);
+  }
+  .menu-content .menu.open .menu-border span:nth-child(3) {
+    -webkit-transform: translate(0, -11px) rotate(-135deg);
+            transform: translate(0, -11px) rotate(-135deg);
+  }
   main > div:not(:nth-child(1)) {
     height: auto;
   }
   main > div .container {
-    padding: 0 0 40px 0;
+    padding: 0 0 100px 0;
+  }
+  main .home .container .title h1 {
+    font-size: 55px;
+  }
+  main .works .container .work .work-image {
+    pointer-events: none;
+  }
+  main .contact .container .contact-list {
+    margin-bottom: 150px;
+  }
+  main .contact .container .contact-list .twitter-icon {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .menu-content {
+    width: 320px;
+  }
+  .menu-content .menu {
+    top: 30px;
+  }
+  main > div .container {
+    padding: 0 0 50px 0;
+  }
+  main .profile .container .profile-photo {
+    height: 350px;
+  }
+  main .contact .container .contact-text p {
+    font-size: 20px;
   }
 }
 
@@ -463,8 +516,8 @@ main .contact .copyright {
   .menu-content2 {
     display: block;
   }
-  .menu-content2 ul li {
-    margin-right: 5px;
+  .menu-content2 ul li:not(:last-child) {
+    margin-right: 20px;
   }
   main > div:not(:nth-child(1)) {
     height: auto;
@@ -473,7 +526,7 @@ main .contact .copyright {
     font-size: 35px;
   }
   main > div .container {
-    padding: 0 0 20px 0;
+    padding: 0 0 40px 0;
   }
   main > div .container h2 {
     margin-bottom: 22%;
